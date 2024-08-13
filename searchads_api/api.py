@@ -409,7 +409,7 @@ class SearchAdsAPI:
          "startTime": "2019-05-28T10:33:31.650",
          "endTime": "2019-05-31T10:33:31.650",
          "automatedKeywordsOptIn": true,
-         "defaultCpcBid": {
+         "defaultBidAmount": {
              "amount": "100",
              "currency": "USD"
          },
@@ -487,7 +487,7 @@ class SearchAdsAPI:
             "campaignId": campaign_id,
             "name": adgroup_name,
             "automatedKeywordsOptIn": automated_keywords_opt_in,
-            "defaultCpcBid": {"amount": "{}".format(cpc_bid), "currency": currency},
+            "defaultBidAmount": {"amount": "{}".format(cpc_bid), "currency": currency},
             "targetingDimensions": dimensions,
             "orgId": self.org_id,
         }
@@ -611,7 +611,7 @@ class SearchAdsAPI:
         "startTime": "2019-08-20T16:20:31.650",
         "endTime": "2019-08-20T19:33:31.650",
         "automatedKeywordsOptIn": false,
-        "defaultCpcBid": {
+        "defaultBidAmount": {
             "amount": "100",
             "currency": "USD"
         },
@@ -680,7 +680,7 @@ class SearchAdsAPI:
         if cpa_goal is not None:
             data["cpaGoal"] = {"amount": "{}".format(cpa_goal), "currency": currency}
         if cpc_bid is not None:
-            data["defaultCpcBid"] = {
+            data["defaultBidAmount"] = {
                 "amount": "{}".format(cpc_bid),
                 "currency": currency,
             }
